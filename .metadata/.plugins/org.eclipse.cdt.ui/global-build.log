@@ -1,0 +1,86 @@
+17:16:53 **** Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "04_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Desktop\stm32\f407_bare_metal\04_gpio_input\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04_gpio_input.elf
+ 
+arm-none-eabi-size   04_gpio_input.elf 
+arm-none-eabi-objdump -h -S  04_gpio_input.elf  > "04_gpio_input.list"
+arm-none-eabi-objcopy  -O binary  04_gpio_input.elf  "04_gpio_input.bin"
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04_gpio_input.bin
+Finished building: 04_gpio_input.list
+ 
+ 
+17:17:06 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+17:19:18 **** Incremental Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-size   00_led_toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+17:19:19 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-size   01_read_user_button.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+17:19:19 **** Incremental Build of configuration Debug for project 02_gpio_output_with_headers ****
+make -j8 all 
+arm-none-eabi-size   02_gpio_output_with_headers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_headers.elf
+Finished building: default.size.stdout
+ 
+17:19:19 **** Incremental Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+17:19:20 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/blue/Desktop/stm32/f407_bare_metal/f4-headers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "04_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Desktop\stm32\f407_bare_metal\04_gpio_input\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04_gpio_input.elf
+ 
+arm-none-eabi-size   04_gpio_input.elf 
+arm-none-eabi-objdump -h -S  04_gpio_input.elf  > "04_gpio_input.list"
+arm-none-eabi-objcopy  -O binary  04_gpio_input.elf  "04_gpio_input.bin"
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04_gpio_input.bin
+Finished building: 04_gpio_input.list
+ 
+ 
+17:19:25 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+17:20:03 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,62 @@
+/* STM32F407 için yazmış olduğum sadece gpio registerlarını içeren header dosyası
+ *
+ *
+ * @Author: Hüseyin Öztürk
+ *
+ *
+ *
+ */
+
+#define PERIPH_BASE 			0x40000000UL
+#define AHB1PERIPH_BASE 		(PERIPH_BASE + 0x20000UL)
+
+#define GPIOA_BASE				(AHB1PERIPH_BASE + 0x0UL)
+#define GPIOA_MODE_R			(*(volatile unsigned int *)(GPIOA_BASE + 0x00UL))
+#define GPIOA_OTYPE_R
+#define GPIOA_OSPEED_R
+#define GPIOA_PUPD_R			(*(volatile unsigned int *)(GPIOA_BASE + 0x0CUL))
+#define GPIOA_ID_R				(*(volatile unsigned int *)(GPIOA_BASE + 0x10L))
+#define GPIOA_OD_R				(*(volatile unsigned int *)(GPIOA_BASE + 0x14L))
+#define GPIOA_BSR_R				(*(volatile unsigned int *)(GPIOA_BASE + 0x18L))
+#define GPIOA_LCK_R				(*(volatile unsigned int *)(GPIOA_BASE + 0x1CL))
+#define GPIOA_AF_L_R			(*(volatile unsigned int *)(GPIOA_BASE + 0x20L))
+#define GPIOA_AF_H_R			(*(volatile unsigned int *)(GPIOA_BASE + 0x24L))
+
+
+
+#define GPIOB_BASE				(AHB1PERIPH_BASE + 0x20400UL)
+#define GPIOC_BASE				(AHB1PERIPH_BASE + 0x20800UL)
+
+#define GPIOD_BASE				(AHB1PERIPH_BASE + 0x20C00UL)
+#define GPIOD_MODE_R			(*(volatile unsigned int *)(GPIOD_BASE + 0x00UL))
+#define GPIOD_OD_R				(*(volatile unsigned int *)(GPIOD_BASE + 0x14UL))
+
+#define GPIOE_BASE				(AHB1PERIPH_BASE + 0x21000UL)
+#define GPIOF_BASE				(AHB1PERIPH_BASE + 0x21400UL)
+#define GPIOG_BASE				(AHB1PERIPH_BASE + 0x21800UL)
+#define GPIOH_BASE				(AHB1PERIPH_BASE + 0x21C00UL)
+#define GPIOI_BASE				(AHB1PERIPH_BASE + 0x22000UL)
+#define GPIOJ_BASE				(AHB1PERIPH_BASE + 0x22400UL)
+#define GPIOK_BASE				(AHB1PERIPH_BASE + 0x22800UL)
+
+#define PIN_0					(1U << 0)
+#define PIN_1					(1U << 1)
+#define PIN_2					(1U << 2)
+#define PIN_3					(1U << 3)
+#define PIN_4					(1U << 4)
+#define PIN_5					(1U << 5)
+#define PIN_6					(1U << 6)
+#define PIN_7					(1U << 7)
+#define PIN_8					(1U << 8)
+#define PIN_9					(1U << 9)
+#define PIN_10					(1U << 10)
+#define PIN_11					(1U << 11)
+#define PIN_12					(1U << 12)
+#define PIN_13					(1U << 13)
+#define PIN_14					(1U << 14)
+#define PIN_15					(1U << 15)
+
+#define RCC_BASE 				(AHB1PERIPH_BASE + 0x3800UL)						// 0x4002 3800
+#define RCC_AHB1EN_R			(*(volatile unsigned int *)(RCC_BASE + 0x30UL))		// 0x4002 3830
+
+#define RCC_GPIOA_EN			(1U << 0)

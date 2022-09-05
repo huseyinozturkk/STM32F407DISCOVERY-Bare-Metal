@@ -1,0 +1,15 @@
+#include <gpio_register_map.h>
+
+
+
+int main ()
+{
+	RCC_AHB1EN_R |= RCC_GPIOD_EN;
+
+	while(1)
+	{
+
+	}
+
+	return 0;
+}

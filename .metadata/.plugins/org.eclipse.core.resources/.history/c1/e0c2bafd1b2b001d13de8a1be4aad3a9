@@ -1,0 +1,17 @@
+#define PERIPH_BASE 			0x40000000UL
+#define AHB1PERIPH_BASE 		(PERIPH_BASE + 0x20000UL)
+
+#define GPIOA_BASE
+#define GPIOB_BASE
+#define GPIOC_BASE
+#define GPIOD_BASE
+#define GPIOE_BASE
+#define GPIOF_BASE
+#define GPIOG_BASE
+#define GPIOH_BASE
+#define GPIOI_BASE
+#define GPIOJ_BASE
+#define GPIOK_BASE
+
+#define RCC_BASE 			(AHB1PERIPH_BASE + 0x3800UL)						// 0x4002 3800
+#define RCC_AHB1EN_R		(*(volatile unsigned int *)(RCC_BASE + 0x30UL))		// 0x4002 3830

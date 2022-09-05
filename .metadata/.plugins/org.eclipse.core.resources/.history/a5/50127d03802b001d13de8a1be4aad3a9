@@ -1,0 +1,3 @@
+#include "stm32f407xx.h"
+
+#define GPIOD_EN	(1U << 3)

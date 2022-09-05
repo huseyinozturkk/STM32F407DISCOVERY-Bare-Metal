@@ -1,0 +1,27 @@
+#include <gpio_register_map.h>
+
+
+
+int main ()
+{
+	RCC_AHB1EN_R |= RCC_GPIOD_EN;
+
+	GPIOA_MODE_R &= 0xA8000000;
+
+	GPIOA_MODE_R &= ~(1U << 0);
+	GPIOA_MODE_R &= ~(1U << 1);
+
+	while(1)
+	{
+		while ((GPIOA_ID_R & PIN0))
+		{
+					if ((GPIOA_ID_R & PIN0) == 0)
+					{
+						break;
+					}
+		}
+
+	}
+
+	return 0;
+}

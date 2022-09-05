@@ -1,0 +1,53 @@
+#ifndef __GPIO_DRIVER_H
+#define __GPIO_DRIVER_H
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
+#define __REG					*(volatile unsigned int *)
+
+typedef unsigned int UINT32;
+
+typedef enum
+{
+	LOW = 0,
+	HIGH = 1
+}GPIO_PinState;
+
+typedef enum
+{
+	GPIOA = 0,
+	GPIOB = 1,
+	GPIOC = 2,
+	GPIOD = 1,
+	GPIOE = 1,
+	GPIOF = 1,
+	GPIOG = 1,
+	GPIOB = 1,
+};
+
+typedef struct
+{
+	__REG uint32_t MODE_R;
+	__REG uint32_t OTYPE_R;
+	__REG uint32_t OSPEED_R;
+	__REG uint32_t PUPD_R;
+	__REG uint32_t ID_R
+	__REG uint32_t OD_R
+	__REG uint32_t BSR_R
+	__REG uint32_t LCK_R
+	__REG uint32_t AFR_HR
+	__REG uint32_t AFR_LR
+}GPIO;
+
+
+uint8_t initPin(GPIO gpiox);
+uint8_t readPin();
+uint8_t writePin();
+
+
+
+
+
+#endif
