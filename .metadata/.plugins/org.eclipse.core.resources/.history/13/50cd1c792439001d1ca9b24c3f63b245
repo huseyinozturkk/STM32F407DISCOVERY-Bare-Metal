@@ -1,0 +1,6 @@
+#include <stdint.h>
+#include "stm32f407xx.h"
+
+// USART2 (APB1) TX->
+
+// GPIO (AHB1)

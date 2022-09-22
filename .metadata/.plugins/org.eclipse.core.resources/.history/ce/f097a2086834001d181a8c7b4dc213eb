@@ -1,0 +1,6 @@
+#include "stm32f407xx.h"
+// USART1 APB2
+// USART1 TX 	PA9
+// USART1 RX	PA10
+#define GPIOAEN		(1U << 0)
+#define USART1EN	()

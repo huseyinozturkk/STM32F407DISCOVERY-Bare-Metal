@@ -1,0 +1,36 @@
+#include <stdint.h>
+#include "stm32f407xx.h"
+
+// USART2 (APB1) TX-> PA2  RX-> PA3
+#define USART2_EN
+#define CR1_TE			(1U << 3)	// UART Transmit en
+#define CR1_UA			(1U << 13)	// UART UART en
+#define SR_TXE			(1U << 6)
+
+// GPIOA (AHB1)
+#define GPIOA_EN		(1U <<)
+
+
+
+int main() {
+
+
+
+	while(1) {
+
+	}
+}
+
+
+
+void clock_init() {
+
+}
+
+void usart2_tx_init() {
+
+}
+
+void usart2_write() {
+
+}

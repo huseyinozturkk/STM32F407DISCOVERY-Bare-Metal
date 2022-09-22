@@ -1,0 +1,22 @@
+#include "stm32f407xx.h"
+// USART1 APB2
+// USART1 TX 	PA9
+// USART1 RX	PA10
+#define GPIOA_EN	(1U << 0)
+#define USART1_EN	(1U << 4)
+
+
+
+int main()
+{
+
+	while(1)
+	{
+
+	}
+}
+
+void uart1_tx_init(void)
+{
+
+}

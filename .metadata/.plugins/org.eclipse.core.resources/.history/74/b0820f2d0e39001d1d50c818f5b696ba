@@ -1,0 +1,79 @@
+#include "stm32f407xx.h"
+
+
+// USART5 APB1 42MHz
+// RX - PD2
+// TX - C12 -- bu uygulamada sadece tx calısacak - AF8
+
+// GPIO - AHB1
+
+#define GPIOC_EN		(1U << 2)
+#define GPIOD_EN		(1U << 3)
+
+#define UART5_EN 		(1U << 20)
+#define CR1_TE			(1U << 3)	// UART Transmit en
+#define CR1_UA			(1U << 13)	// UART UART en
+#define SR_TXE			(1U << 7)	// UART Transmit data reg empty
+
+#define SYS_FREQ 		16000000
+#define APB1_CLK		SYS_FREQ
+#define UART_BAUDRATE 	115200
+
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+
+void uart5_tx_init(void);
+void uart5_write(int ch);
+
+int main() {
+
+	uart5_tx_init();
+
+	while(1) {
+		uart5_write('H');
+	}
+
+	return 0;
+}
+
+void uart5_tx_init(void) {
+
+	// uart gpio -----------------------
+
+	// gpioc clock en
+	RCC->AHB1ENR |= GPIOC_EN;
+	// set c12 mode to AF mode 10
+	GPIOC->MODER &= ~(1U << 24); // 0
+	GPIOC->MODER |= (1U << 25);  // 1
+	// set c12 af type to uart5_tx   1000
+	GPIOC->AFR[2] |= (1U << 19);
+	GPIOC->AFR[2] &= ~(1U << 18);
+	GPIOC->AFR[2] &= ~(1U << 17);
+	GPIOC->AFR[2] &= ~(1U << 16);
+	// uart config ----------------------
+
+	// uart clock en
+	RCC->APB1ENR |= UART5_EN;
+	// baud rate
+	uart_set_baudrate(UART5, APB1_CLK, UART_BAUDRATE);
+	// transfer direction
+	UART5->CR1 = CR1_TE;
+	// en uart
+	UART5->CR1 |= CR1_UA;
+}
+
+void uart5_write(int ch) {
+	// is transmit data reg empty
+	while(!(UART5->SR & SR_TXE)) {}
+	// write data to transmit data reg
+	UART5->DR = (ch && 0xFF);
+
+}
+
+static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+	USARTx->BRR = compute_uart_bd(PeriphClk, baudRate);
+}
+
+static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+	return ((PeriphClk + (baudRate / 2U))/baudRate);
+}
