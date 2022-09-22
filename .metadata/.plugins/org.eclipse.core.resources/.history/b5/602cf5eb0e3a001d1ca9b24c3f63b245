@@ -95,7 +95,7 @@ void usart2_write(uint8_t ch) {
 	// is transmit data reg empty
 	while(!(USART2->SR & SR_TXE)) {}
 	// write data to tx data reg
-	USART2->DR = (ch & 0xFF);
+	USART2->DR = (ch && 0xFF);
 }
 
 void usart2_test(uint8_t *pMsg, uint8_t msgLen) {
