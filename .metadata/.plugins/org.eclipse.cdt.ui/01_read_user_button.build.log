@@ -1,4 +1,4 @@
-02:46:33 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+12:35:34 **** Incremental Build of configuration Debug for project 01_read_user_button ****
 make -j8 all 
 arm-none-eabi-size   01_read_user_button.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   01_read_user_button.elf
 Finished building: default.size.stdout
  
 
-02:46:33 Build Finished. 0 errors, 0 warnings. (took 175ms)
+12:35:34 Build Finished. 0 errors, 0 warnings. (took 210ms)
 

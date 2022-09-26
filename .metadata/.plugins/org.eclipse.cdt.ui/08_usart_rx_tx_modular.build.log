@@ -1,0 +1,7 @@
+17:38:46 **** Clean-only build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 clean 
+rm -rf  default.size.stdout  07_usart_tx_modular.list  07_usart_tx_modular.elf  ./Startup/startup_stm32f407vgtx.o  ./Src/main.o ./Src/syscalls.o ./Src/sysmem.o ./Src/uart.o  ./Startup/startup_stm32f407vgtx.d  ./Src/main.d ./Src/syscalls.d ./Src/sysmem.d ./Src/uart.d  07_usart_tx_modular.bin  07_usart_tx_modular.elf
+ 
+
+17:38:46 Build Finished. 0 errors, 0 warnings. (took 616ms)
+
