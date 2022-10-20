@@ -1,333 +1,111 @@
-!SESSION 2022-08-29 00:24:45.116 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
+!SESSION 2022-10-20 00:17:25.954 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-08-29 00:25:42.616
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-10-20 00:17:43.281
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-08-29 00:25:42.699
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-10-20 00:17:43.363
+!MESSAGE Log4j initialized with config file C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-08-29 00:25:57.614
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-10-20 00:17:57.903
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY org.eclipse.cdt.core 1 0 2022-08-29 00:28:15.213
-!MESSAGE Indexed '00_led_toggle' (3 sources, 53 headers) in 1.07 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:19:48.714
+!MESSAGE Indexed '00_led_toggle' (3 sources, 53 headers) in 1.23 sec: 1,949 declarations; 2,811 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
 
-!ENTRY org.eclipse.jface 2 0 2022-08-29 11:32:05.729
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.729
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f273416,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
-		Open an element in an Editor,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f273416,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.729
-!MESSAGE A conflict occurred for CTRL+SHIFT+H:
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c6c059e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
-		Open a type in the type hierarchy view,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c6c059e,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.729
-!MESSAGE A conflict occurred for CTRL+SHIFT+G:
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Searches for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67fd7497,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+SHIFT+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
-		Searches for references to the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67fd7497,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.729
-!MESSAGE A conflict occurred for ALT+CTRL+H:
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Opens the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@559100ea,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+H,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
-		Opens the call hierarchy for the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@559100ea,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.730
-!MESSAGE A conflict occurred for ALT+CTRL+I:
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@430009ca,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+CTRL+I,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
-		Open an include browser on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@430009ca,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.730
-!MESSAGE A conflict occurred for ALT+SHIFT+R:
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Renames the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3fbcb4c1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(ALT+SHIFT+R,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
-		Renames the selected element,
-		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3fbcb4c1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.730
-!MESSAGE A conflict occurred for CTRL+G:
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Searches for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3369366d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(CTRL+G,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
-		Searches for declarations of the selected element in the workspace,
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3369366d,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.730
-!MESSAGE A conflict occurred for F3:
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Opens an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e22f6ba,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F3,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
-		Opens an editor on the selected element's declaration(s),
-		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6e22f6ba,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
-!SUBENTRY 1 org.eclipse.jface 2 0 2022-08-29 11:32:05.730
-!MESSAGE A conflict occurred for F4:
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d2ffced,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cEditorScope,,,system)
-Binding(F4,
-	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
-		Open a type hierarchy on the selected element,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d2ffced,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.cdt.ui.cViewScope,,,system)
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:23:13.973
+!MESSAGE Indexed '01_read_user_button' (2 sources, 53 headers) in 0.686 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
 
-!ENTRY org.eclipse.cdt.core 1 0 2022-08-29 11:32:23.885
-!MESSAGE Indexed 'f030_rtc' (21 sources, 81 headers) in 3.12 sec: 4,029 declarations; 20,979 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.008%)
-!SESSION 2022-09-03 00:52:30.659 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:26:26.251
+!MESSAGE Indexed '02_gpio_output_with_f4headers' (3 sources, 53 headers) in 0.61 sec: 1,949 declarations; 2,811 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-03 00:52:47.424
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-03 00:52:47.514
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-03 00:53:05.278
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.help.base 2 0 2022-09-03 01:34:17.069
-!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.doc.user_5.4.700.202012191711 [175]'. The index should be rebuilt with Lucene 8.4.1
-
-!ENTRY org.eclipse.help.base 2 0 2022-09-03 01:34:17.072
-!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.19.0.v20210303-0957 [334]'. The index should be rebuilt with Lucene 8.4.1
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:54.998
-!MESSAGE Error - No active DSF-Session. tmpSessionId = 9 (contextManager row 121)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:54.998
-!MESSAGE Existing sessions are:
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:54.998
-!MESSAGE 10
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:55.138
-!MESSAGE Error - No active DSF-Session. tmpSessionId = 9 (contextManager row 121)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:55.154
-!MESSAGE Existing sessions are:
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 01:54:55.154
-!MESSAGE 10
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 02:04:03.967
-!MESSAGE Indexed '01_read_user_button' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 02:04:07.464
-!MESSAGE Indexed '01_read_user_button' (3 sources, 53 headers) in 0.71 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug.stlink 4 4 2022-09-03 02:30:06.431
-!MESSAGE ST-LINK GDB server failed to start (exit code = 1)
-
-!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2022-09-03 02:30:06.479
-!MESSAGE Error in final launch sequence:
-
-Failed to start GDB server
+!ENTRY org.eclipse.cdt.ui 4 0 2022-10-20 00:30:47.745
+!MESSAGE Error in CDT UI during reconcile
 !STACK 1
-org.eclipse.core.runtime.CoreException: Failed to start GDB server
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:251)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
-	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:307)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
-Reason: (1) Failed to connect to device. Please check power and cabling to target.
-	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1687)
-	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:183)
-	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:91)
-	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:230)
-	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:100)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
-	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
-	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-!SUBENTRY 1 com.st.stm32cube.ide.mcu.debug.launch 4 0 2022-09-03 02:30:06.482
-!MESSAGE Failed to start GDB server
-!STACK 1
-org.eclipse.core.runtime.CoreException: Error in initializing ST-LINK device.
-Reason: (1) Failed to connect to device. Please check power and cabling to target.
-	at com.st.stm32cube.ide.mcu.debug.stlink.StLinkDebugHardware.verifyServer(StLinkDebugHardware.java:1687)
-	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:183)
-	at com.st.stm32cube.ide.mcu.debug.launch.export.HardwareDebugUtil.startServer(HardwareDebugUtil.java:91)
-	at com.st.stm32cube.ide.mcu.debug.launch.LaunchSequenceUtil.stepStartGDBServer(LaunchSequenceUtil.java:230)
-	at com.st.stm32cube.ide.mcu.debug.launch.GDBExtendedJtagDSFFinalLaunchSequence_7_12.stepStartGDBServer(GDBExtendedJtagDSFFinalLaunchSequence_7_12.java:100)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.eclipse.cdt.dsf.concurrent.ReflectionSequence$ReflectionStep.execute(ReflectionSequence.java:160)
-	at org.eclipse.cdt.dsf.concurrent.Sequence.executeStep(Sequence.java:475)
-	at org.eclipse.cdt.dsf.concurrent.Sequence$2.handleSuccess(Sequence.java:437)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:391)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:317)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-!SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2022-09-03 02:30:06.482
-!MESSAGE Error in initializing ST-LINK device.
-Reason: (1) Failed to connect to device. Please check power and cabling to target.
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2022-10-20 00:30:47.746
+!MESSAGE Element main.c does not exist.
 
-!ENTRY org.eclipse.ui 4 0 2022-09-03 02:33:12.352
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-20 00:31:43.823
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.help.base 2 0 2022-10-20 00:33:51.042
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.cdt.doc.user_5.4.1100.202112141617 [181]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.help.base 2 0 2022-10-20 00:33:51.048
+!MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.platform.doc.user_4.23.0.v20220302-1425 [340]'. The index should be rebuilt with Lucene 8.4.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:35:43.248
+!MESSAGE Indexed '03_gpio_bsrr' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:35:44.399
+!MESSAGE Indexed '03_gpio_bsrr' (2 sources, 53 headers) in 0.585 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:40:37.875
+!MESSAGE Indexed '04_gpio_input' (2 sources, 53 headers) in 0.177 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.ui 4 0 2022-10-20 00:42:52.400
 !MESSAGE Unhandled event loop exception
 !STACK 0
-org.eclipse.core.runtime.AssertionFailedException: null argument:Action must not be null
-	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:88)
-	at org.eclipse.jface.action.ContributionManager.add(ContributionManager.java:76)
-	at org.eclipse.debug.internal.ui.views.expression.ExpressionView.fillContextMenu(ExpressionView.java:83)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:338)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:468)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:463)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+java.lang.NullPointerException
+	at com.st.stm32cube.common.mx.targetselector.TargetSelectorAdapter.getBoard(TargetSelectorAdapter.java:340)
+	at com.st.stm32cube.common.projectcreation.ui.wizard.TargetSetupPageAbstract.getSelectedTargetName(TargetSetupPageAbstract.java:441)
+	at com.st.stm32cube.common.projectcreation.ui.wizard.FirmwareSetupPage.setOptionGroupComposite(FirmwareSetupPage.java:248)
+	at com.st.stm32cube.common.projectcreation.ui.wizard.FirmwareSetupPage.createControl(FirmwareSetupPage.java:204)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:178)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:743)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:635)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.ui.internal.navigator.wizards.WizardShortcutAction.run(WizardShortcutAction.java:99)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1048)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5157)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4789)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2263)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4930)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4067)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3620)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.SwtInputBlocker.open(SwtInputBlocker.java:55)
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.SwtInputBlocker.block(SwtInputBlocker.java:111)
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment.invokeAwt(AwtEnvironment.java:179)
+	at com.st.stm32cube.common.mx.oss.core.awtswtbridge.AwtEnvironment.invokeAwtAndBlockSwt(AwtEnvironment.java:206)
+	at com.st.stm32cube.common.mx.targetselector.TargetSelectorAdapter.launchMCUFinder(TargetSelectorAdapter.java:202)
+	at com.st.stm32cube.common.mx.targetselector.TargetSelectorAdapter.addTargetSelector(TargetSelectorAdapter.java:150)
+	at com.st.stm32cube.common.projectcreation.ui.wizard.TargetSetupPageAbstract.createControl(TargetSetupPageAbstract.java:131)
+	at org.eclipse.jface.wizard.Wizard.createPageControls(Wizard.java:178)
+	at org.eclipse.jface.wizard.WizardDialog.createPageControls(WizardDialog.java:743)
+	at org.eclipse.jface.wizard.WizardDialog.createContents(WizardDialog.java:635)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1094)
+	at org.eclipse.ui.internal.navigator.wizards.WizardShortcutAction.run(WizardShortcutAction.java:99)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
 	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
@@ -337,7 +115,7 @@ org.eclipse.core.runtime.AssertionFailedException: null argument:Action must not
 	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
 	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
 	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
 	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
 	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
@@ -345,175 +123,30 @@ org.eclipse.core.runtime.AssertionFailedException: null argument:Action must not
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 
-!ENTRY org.eclipse.cdt.dsf 4 10005 2022-09-03 02:37:42.923
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@3a7df536): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout. null' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2022-09-03 02:37:42.923
-!MESSAGE Suspend operation timeout.
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:44:20.047
+!MESSAGE Indexed '05_usart_tx' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
 
-!ENTRY com.st.stm32cube.ide.mcu.debug 2 2 2022-09-03 02:37:55.576
-!MESSAGE ST-LINK firmware verification, Check required failed
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:44:21.080
+!MESSAGE Indexed '05_usart_tx' (2 sources, 53 headers) in 0.438 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
 
-!ENTRY com.st.stm32cube.ide.mcu.debug 2 2 2022-09-03 02:37:55.577
-!MESSAGE ST-LINK firmware verification, No latest info found: -1
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:45:59.905
+!MESSAGE Indexed '06_usart_tx_with_printf' (2 sources, 53 headers) in 0.379 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
 
-!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2022-09-03 02:38:12.817
-!MESSAGE Error in final launch sequence:
+!ENTRY org.eclipse.cdt.dsf 4 10005 2022-10-20 00:47:11.577
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@206732ad): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
 
-Failed to execute MI command:
-target remote localhost:61234
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:47:56.575
+!MESSAGE Indexed '07_usart_tx_modular' (2 sources, 53 headers) in 0.38 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
 
-Error message from debugger back end:
-localhost:61234: Sistem, sürücüyü birleþtirilmiþ bir sürücüdeki bir dizine birleþtirmeyi denedi.
-!STACK 1
-org.eclipse.core.runtime.CoreException: Failed to execute MI command:
-target remote localhost:61234
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-20 00:49:47.573
+!MESSAGE Won't launch debug session since we failed to locate the binary.
 
-Error message from debugger back end:
-localhost:61234: Sistem, sürücüyü birleþtirilmiþ bir sürücüdeki bir dizine birleþtirmeyi denedi.
-	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:251)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:108)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:96)
-	at com.st.stm32cube.ide.mcu.debug.launch.DSFDelegate.launch(DSFDelegate.java:307)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.lang.Exception: localhost:61234: Sistem, sürücüyü birleþtirilmiþ bir sürücüdeki bir dizine birleþtirmeyi denedi.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2022-09-03 02:38:12.818
-!MESSAGE Failed to execute MI command:
-target remote localhost:61234
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-20 00:50:25.583
+!MESSAGE Won't launch debug session since we failed to locate the binary.
 
-Error message from debugger back end:
-localhost:61234: Sistem, sürücüyü birleþtirilmiþ bir sürücüdeki bir dizine birleþtirmeyi denedi.
-!STACK 0
-java.lang.Exception: localhost:61234: Sistem, sürücüyü birleþtirilmiþ bir sürücüdeki bir dizine birleþtirmeyi denedi.
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1014)
-	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:843)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 02:58:27.314
-!MESSAGE Indexed '02_gpio_driver_development' (2 sources, 53 headers) in 0.313 sec: 1,962 declarations; 2,808 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 14:56:28.932
-!MESSAGE Indexed '02_gpio_output_with_headers' (3 sources, 53 headers) in 0.422 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 16:48:01.673
-!MESSAGE Indexed '03_gpio_bsrr' (3 sources, 61 headers) in 1.72 sec: 3,240 declarations; 5,316 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.023%)
-!SESSION 2022-09-03 16:59:12.124 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY org.eclipse.core.resources 2 10035 2022-09-03 16:59:18.014
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-03 16:59:25.974
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-03 16:59:26.055
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-03 16:59:44.835
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-03 17:03:41.183
-!MESSAGE Indexed '04_gpio_input' (3 sources, 59 headers) in 1,35 sec: 2.857 declarations; 3.840 references; 3 unresolved inclusions; 30 syntax errors; 725 unresolved names (%9,8)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 17:20:08.609
-!MESSAGE Error - No active DSF-Session. tmpSessionId = 3 (contextManager row 121)
-
-!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2022-09-03 17:20:08.610
-!MESSAGE Existing sessions are:
-!SESSION 2022-09-14 22:49:51.226 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-14 22:50:09.544
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-14 22:50:09.628
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-14 22:50:35.139
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-14 22:55:07.657
-!MESSAGE Indexed '05_uart_tx' (3 sources, 53 headers) in 0.99 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
-!SESSION 2022-09-20 18:39:43.557 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY org.eclipse.core.resources 2 10035 2022-09-20 18:39:54.085
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-20 18:40:03.183
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-20 18:40:03.277
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-20 18:40:20.718
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-20 18:44:58.056
-!MESSAGE Indexed '05_uart_tx' (3 sources, 53 headers) in 0.835 sec: 1,964 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
-
-!ENTRY org.eclipse.core.jobs 2 2 2022-09-20 21:37:17.413
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
-!SESSION 2022-09-20 23:30:07.848 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-20 23:33:32.566
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-20 23:33:32.631
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-20 23:33:47.589
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-22 02:42:36.908
-!MESSAGE Indexed '05_usart_tx' (3 sources, 53 headers) in 1.28 sec: 1,964 declarations; 2,810 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
-!SESSION 2022-09-22 12:18:13.395 -----------------------------------------------
-eclipse.buildId=Version 1.7.0
-java.version=11.0.10
-java.vendor=AdoptOpenJDK
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-09-22 12:18:28.406
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-09-22 12:18:28.482
-!MESSAGE Log4j initialized with config file C:\Users\blue\Desktop\stm32\f407_bare_metal\.metadata\.log4j.xml
-
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-09-22 12:18:46.719
-!MESSAGE Started RMI Server, listening on port 41337
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-22 12:21:16.202
-!MESSAGE Indexed '06_usart_tx_printf' (3 sources, 59 headers) in 1,37 sec: 2.894 declarations; 3.867 references; 5 unresolved inclusions; 30 syntax errors; 746 unresolved names (%9,9)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-22 12:28:49.949
-!MESSAGE Indexed '07_usart_tx_modular' (3 sources, 64 headers) in 1,35 sec: 3.480 declarations; 5.536 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (%0,022)
-
-!ENTRY org.eclipse.cdt.core 1 0 2022-09-22 17:38:46.544
-!MESSAGE Indexed '08_usart_rx_tx_modular' (4 sources, 65 headers) in 1,66 sec: 3.475 declarations; 5.519 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (%0,022)
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-20 00:52:14.379
+!MESSAGE Indexed '08_usart_rx_tx_modular' (2 sources, 53 headers) in 0.369 sec: 1,947 declarations; 2,809 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)

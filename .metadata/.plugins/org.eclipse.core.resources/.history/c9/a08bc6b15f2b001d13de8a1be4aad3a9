@@ -1,7 +1,0 @@
-#include "gpio_driver.h"
-
-uint8_t initPin(GPIO config, GPIO_Port portx)
-{
-
-}
-

@@ -1,9 +1,0 @@
-#include <gpio_register_map.h>
-
-
-
-int main ()
-{
-
-	return 0;
-}

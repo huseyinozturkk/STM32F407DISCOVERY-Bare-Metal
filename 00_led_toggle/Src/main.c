@@ -18,26 +18,30 @@
 int main()
 {
 	// D portu için clock aktif edilir.
+	// Enable clock for port D
 	RCC_AHB1EN_R |= RCC_GPIOD_EN;
 
 	// D portu temizlenir
+	// clear D port
 	GPIOD_MODE_R &= 0x0;
 
 	// D12 çıkış olarak ayarlanır
+	// set D12 as output
 	GPIOD_MODE_R |= (1U << 24);
 	GPIOD_MODE_R &= ~(1U << 25);
-	// 13
+	// set D13 as output
 	GPIOD_MODE_R |= (1U << 26);
 	GPIOD_MODE_R &= ~(1U << 27);
-	// 14
+	// set D14 as output
 	GPIOD_MODE_R |= (1U << 28);
 	GPIOD_MODE_R &= ~(1U << 29);
-	// 15
+	// set D15 as output
 	GPIOD_MODE_R |= (1U << 30);
 	GPIOD_MODE_R &= ~(1U << 31);
 
 	while(1)
 	{
+		// This is where disco begins..
 		GPIOD_OD_R ^= PIN12;
 		GPIOD_OD_R ^= PIN13;
 		GPIOD_OD_R ^= PIN14;

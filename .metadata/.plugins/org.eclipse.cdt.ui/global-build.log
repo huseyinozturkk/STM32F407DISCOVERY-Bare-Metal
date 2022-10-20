@@ -1,4 +1,765 @@
-17:38:46 **** Clean-only build of configuration Debug for project 08_usart_rx_tx_modular ****
-make -j8 clean 
-rm -rf  default.size.stdout  07_usart_tx_modular.list  07_usart_tx_modular.elf  ./Startup/startup_stm32f407vgtx.o  ./Src/main.o ./Src/syscalls.o ./Src/sysmem.o ./Src/uart.o  ./Startup/startup_stm32f407vgtx.d  ./Src/main.d ./Src/syscalls.d ./Src/sysmem.d ./Src/uart.d  07_usart_tx_modular.bin  07_usart_tx_modular.elf
+00:21:45 **** Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "00_led_toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\00_led_toggle\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="00_led_toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 00_led_toggle.elf
+ 
+arm-none-eabi-size   00_led_toggle.elf 
+arm-none-eabi-objdump -h -S  00_led_toggle.elf  > "00_led_toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: 00_led_toggle.list
+ 
+00:21:59 **** Incremental Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-size   00_led_toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+00:24:41 **** Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "01_read_user_button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\01_read_user_button\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01_read_user_button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01_read_user_button.elf
+ 
+arm-none-eabi-size   01_read_user_button.elf 
+arm-none-eabi-objdump -h -S  01_read_user_button.elf  > "01_read_user_button.list"
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01_read_user_button.list
+ 
+00:24:47 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-size   01_read_user_button.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+00:31:43 **** Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+In file included from ../Src/main.c:1:
+../Inc/stm32f407xx.h:166:10: fatal error: core_cm4.h: No such file or directory
+  166 | #include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:34:40 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "02_gpio_output_with_f4headers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\02_gpio_output_with_f4headers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02_gpio_output_with_f4headers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02_gpio_output_with_f4headers.elf
+ 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+arm-none-eabi-objdump -h -S  02_gpio_output_with_f4headers.elf  > "02_gpio_output_with_f4headers.list"
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02_gpio_output_with_f4headers.list
+ 
+00:34:47 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+00:38:38 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "02_gpio_output_with_f4headers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\02_gpio_output_with_f4headers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="02_gpio_output_with_f4headers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 02_gpio_output_with_f4headers.elf
+ 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+arm-none-eabi-objdump -h -S  02_gpio_output_with_f4headers.elf  > "02_gpio_output_with_f4headers.list"
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 02_gpio_output_with_f4headers.list
+ 
+00:39:47 **** Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "03_gpio_bsrr.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\03_gpio_bsrr\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="03_gpio_bsrr.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 03_gpio_bsrr.elf
+ 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+arm-none-eabi-objdump -h -S  03_gpio_bsrr.elf  > "03_gpio_bsrr.list"
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 03_gpio_bsrr.list
+ 
+00:39:55 **** Incremental Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+00:42:01 **** Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "04_gpio_input.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\04_gpio_input\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="04_gpio_input.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 04_gpio_input.elf
+ 
+arm-none-eabi-size   04_gpio_input.elf 
+arm-none-eabi-objdump -h -S  04_gpio_input.elf  > "04_gpio_input.list"
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+Finished building: 04_gpio_input.list
+ 
+00:42:08 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+00:46:52 **** Build of configuration Debug for project 06_usart_tx_with_printf ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:40:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   40 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "06_usart_tx_with_printf.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\06_usart_tx_with_printf\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="06_usart_tx_with_printf.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 06_usart_tx_with_printf.elf
+ 
+arm-none-eabi-size   06_usart_tx_with_printf.elf 
+arm-none-eabi-objdump -h -S  06_usart_tx_with_printf.elf  > "06_usart_tx_with_printf.list"
+   text	   data	    bss	    dec	    hex	filename
+   1368	      8	   1568	   2944	    b80	06_usart_tx_with_printf.elf
+Finished building: default.size.stdout
+ 
+Finished building: 06_usart_tx_with_printf.list
+ 
+00:47:01 **** Incremental Build of configuration Debug for project 06_usart_tx_with_printf ****
+make -j8 all 
+arm-none-eabi-size   06_usart_tx_with_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1368	      8	   1568	   2944	    b80	06_usart_tx_with_printf.elf
+Finished building: default.size.stdout
+ 
+00:47:05 **** Build of configuration Debug for project 05_usart_tx ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:46:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   46 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "05_usart_tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\05_usart_tx\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05_usart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 05_usart_tx.elf
+ 
+arm-none-eabi-size   05_usart_tx.elf 
+arm-none-eabi-objdump -h -S  05_usart_tx.elf  > "05_usart_tx.list"
+   text	   data	    bss	    dec	    hex	filename
+   5764	    108	   1588	   7460	   1d24	05_usart_tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: 05_usart_tx.list
+ 
+00:47:11 **** Incremental Build of configuration Debug for project 05_usart_tx ****
+make -j8 all 
+arm-none-eabi-size   05_usart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5764	    108	   1588	   7460	   1d24	05_usart_tx.elf
+Finished building: default.size.stdout
+ 
+00:49:46 **** Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+In file included from ../Src/uart.c:1:
+../Inc/uart.h:5:19: error: unknown type name 'uint8_t'
+    5 | void usart2_write(uint8_t ch);
+      |                   ^~~~~~~
+../Inc/uart.h:6:18: error: unknown type name 'uint8_t'
+    6 | void usart2_test(uint8_t *pMsg, uint8_t msgLen);
+      |                  ^~~~~~~
+../Inc/uart.h:6:33: error: unknown type name 'uint8_t'
+    6 | void usart2_test(uint8_t *pMsg, uint8_t msgLen);
+      |                                 ^~~~~~~
+../Src/uart.c:17:31: error: unknown type name 'USART_TypeDef'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                               ^~~~~~~~~~~~~
+../Src/uart.c:17:54: error: unknown type name 'uint32_t'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                                                      ^~~~~~~~
+../Src/uart.c:17:74: error: unknown type name 'uint32_t'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                                                                          ^~~~~~~~
+../Src/uart.c:18:8: error: unknown type name 'uint16_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |        ^~~~~~~~
+../Src/uart.c:18:33: error: unknown type name 'uint32_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |                                 ^~~~~~~~
+../Src/uart.c:18:53: error: unknown type name 'uint32_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |                                                     ^~~~~~~~
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:22:2: warning: implicit declaration of function 'usart2_write' [-Wimplicit-function-declaration]
+   22 |  usart2_write(ch);
+      |  ^~~~~~~~~~~~
+../Src/uart.c: In function 'usart2_tx_init':
+../Src/uart.c:30:3: error: 'RCC' undeclared (first use in this function)
+   30 |   RCC->AHB1ENR |= GPIOA_EN;
+      |   ^~~
+../Src/uart.c:30:3: note: each undeclared identifier is reported only once for each function it appears in
+../Src/uart.c:32:3: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOA_EN'?
+   32 |   GPIOA->MODER = 0xA8000000;  // reset
+      |   ^~~~~
+      |   GPIOA_EN
+../Src/uart.c:47:3: warning: implicit declaration of function 'uart_set_baudrate' [-Wimplicit-function-declaration]
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |   ^~~~~~~~~~~~~~~~~
+../Src/uart.c:47:21: error: 'USART2' undeclared (first use in this function); did you mean 'USART2_EN'?
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                     ^~~~~~
+      |                     USART2_EN
+../Src/uart.c:12:22: error: 'uint32_t' undeclared (first use in this function)
+   12 | #define SYS_FREQ   ((uint32_t)16000000) // internal high speed osc
+      |                      ^~~~~~~~
+../Src/uart.c:13:19: note: in expansion of macro 'SYS_FREQ'
+   13 | #define APB1_CLK  SYS_FREQ
+      |                   ^~~~~~~~
+../Src/uart.c:47:29: note: in expansion of macro 'APB1_CLK'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                             ^~~~~~~~
+../Src/uart.c:12:31: error: expected ')' before numeric constant
+   12 | #define SYS_FREQ   ((uint32_t)16000000) // internal high speed osc
+      |                    ~          ^~~~~~~~
+../Src/uart.c:13:19: note: in expansion of macro 'SYS_FREQ'
+   13 | #define APB1_CLK  SYS_FREQ
+      |                   ^~~~~~~~
+../Src/uart.c:47:29: note: in expansion of macro 'APB1_CLK'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                             ^~~~~~~~
+../Src/uart.c:15:35: error: expected ')' before numeric constant
+   15 | #define UART_BAUDRATE  ((uint32_t)115200)
+      |                        ~          ^~~~~~
+../Src/uart.c:47:39: note: in expansion of macro 'UART_BAUDRATE'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                                       ^~~~~~~~~~~~~
+../Src/main.c:5:10: fatal error: stm32f407xx.h: No such file or directory
+    5 | #include "stm32f407xx.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+../Src/uart.c: At top level:
+../Src/uart.c:56:19: error: unknown type name 'uint8_t'
+   56 | void usart2_write(uint8_t ch) {
+      |                   ^~~~~~~
+../Src/uart.c:63:18: error: unknown type name 'uint8_t'
+   63 | void usart2_test(uint8_t *pMsg, uint8_t msgLen) {
+      |                  ^~~~~~~
+../Src/uart.c:63:33: error: unknown type name 'uint8_t'
+   63 | void usart2_test(uint8_t *pMsg, uint8_t msgLen) {
+      |                                 ^~~~~~~
+../Src/uart.c:74:31: error: unknown type name 'USART_TypeDef'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                               ^~~~~~~~~~~~~
+../Src/uart.c:74:54: error: unknown type name 'uint32_t'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                      ^~~~~~~~
+../Src/uart.c:74:74: error: unknown type name 'uint32_t'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                                          ^~~~~~~~
+../Src/uart.c:78:8: error: unknown type name 'uint16_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |        ^~~~~~~~
+../Src/uart.c:78:33: error: unknown type name 'uint32_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |                                 ^~~~~~~~
+../Src/uart.c:78:53: error: unknown type name 'uint32_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                     ^~~~~~~~
+make: *** [Src/subdir.mk:28: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:50:24 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+In file included from ../Src/uart.c:1:
+../Inc/uart.h:5:19: error: unknown type name 'uint8_t'
+    5 | void usart2_write(uint8_t ch);
+      |                   ^~~~~~~
+../Inc/uart.h:6:18: error: unknown type name 'uint8_t'
+    6 | void usart2_test(uint8_t *pMsg, uint8_t msgLen);
+      |                  ^~~~~~~
+../Inc/uart.h:6:33: error: unknown type name 'uint8_t'
+    6 | void usart2_test(uint8_t *pMsg, uint8_t msgLen);
+      |                                 ^~~~~~~
+../Src/uart.c:17:31: error: unknown type name 'USART_TypeDef'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                               ^~~~~~~~~~~~~
+../Src/uart.c:17:54: error: unknown type name 'uint32_t'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                                                      ^~~~~~~~
+../Src/uart.c:17:74: error: unknown type name 'uint32_t'
+   17 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate);
+      |                                                                          ^~~~~~~~
+../Src/uart.c:18:8: error: unknown type name 'uint16_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |        ^~~~~~~~
+../Src/uart.c:18:33: error: unknown type name 'uint32_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |                                 ^~~~~~~~
+../Src/uart.c:18:53: error: unknown type name 'uint32_t'
+   18 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate);
+      |                                                     ^~~~~~~~
+../Src/uart.c: In function '__io_putchar':
+../Src/uart.c:22:2: warning: implicit declaration of function 'usart2_write' [-Wimplicit-function-declaration]
+   22 |  usart2_write(ch);
+      |  ^~~~~~~~~~~~
+../Src/uart.c: In function 'usart2_tx_init':
+../Src/uart.c:30:3: error: 'RCC' undeclared (first use in this function)
+   30 |   RCC->AHB1ENR |= GPIOA_EN;
+      |   ^~~
+../Src/uart.c:30:3: note: each undeclared identifier is reported only once for each function it appears in
+../Src/uart.c:32:3: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIOA_EN'?
+   32 |   GPIOA->MODER = 0xA8000000;  // reset
+      |   ^~~~~
+      |   GPIOA_EN
+../Src/uart.c:47:3: warning: implicit declaration of function 'uart_set_baudrate' [-Wimplicit-function-declaration]
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |   ^~~~~~~~~~~~~~~~~
+../Src/uart.c:47:21: error: 'USART2' undeclared (first use in this function); did you mean 'USART2_EN'?
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                     ^~~~~~
+      |                     USART2_EN
+../Src/uart.c:12:22: error: 'uint32_t' undeclared (first use in this function)
+   12 | #define SYS_FREQ   ((uint32_t)16000000) // internal high speed osc
+      |                      ^~~~~~~~
+../Src/uart.c:13:19: note: in expansion of macro 'SYS_FREQ'
+   13 | #define APB1_CLK  SYS_FREQ
+      |                   ^~~~~~~~
+../Src/uart.c:47:29: note: in expansion of macro 'APB1_CLK'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                             ^~~~~~~~
+../Src/uart.c:12:31: error: expected ')' before numeric constant
+   12 | #define SYS_FREQ   ((uint32_t)16000000) // internal high speed osc
+      |                    ~          ^~~~~~~~
+../Src/uart.c:13:19: note: in expansion of macro 'SYS_FREQ'
+   13 | #define APB1_CLK  SYS_FREQ
+      |                   ^~~~~~~~
+../Src/uart.c:47:29: note: in expansion of macro 'APB1_CLK'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                             ^~~~~~~~
+../Src/uart.c:15:35: error: expected ')' before numeric constant
+   15 | #define UART_BAUDRATE  ((uint32_t)115200)
+      |                        ~          ^~~~~~
+../Src/uart.c:47:39: note: in expansion of macro 'UART_BAUDRATE'
+   47 |   uart_set_baudrate(USART2, APB1_CLK, UART_BAUDRATE);
+      |                                       ^~~~~~~~~~~~~
+../Src/uart.c: At top level:
+../Src/uart.c:56:19: error: unknown type name 'uint8_t'
+   56 | void usart2_write(uint8_t ch) {
+      |                   ^~~~~~~
+../Src/uart.c:63:18: error: unknown type name 'uint8_t'
+   63 | void usart2_test(uint8_t *pMsg, uint8_t msgLen) {
+      |                  ^~~~~~~
+../Src/uart.c:63:33: error: unknown type name 'uint8_t'
+   63 | void usart2_test(uint8_t *pMsg, uint8_t msgLen) {
+      |                                 ^~~~~~~
+../Src/uart.c:74:31: error: unknown type name 'USART_TypeDef'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                               ^~~~~~~~~~~~~
+../Src/uart.c:74:54: error: unknown type name 'uint32_t'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                      ^~~~~~~~
+../Src/uart.c:74:74: error: unknown type name 'uint32_t'
+   74 | static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                                          ^~~~~~~~
+../Src/uart.c:78:8: error: unknown type name 'uint16_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |        ^~~~~~~~
+../Src/uart.c:78:33: error: unknown type name 'uint32_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |                                 ^~~~~~~~
+../Src/uart.c:78:53: error: unknown type name 'uint32_t'
+   78 | static uint16_t compute_uart_bd(uint32_t PeriphClk, uint32_t baudRate) {
+      |                                                     ^~~~~~~~
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/main.c: In function 'main':
+../Src/main.c:22:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   22 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:51:05 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/main.c: In function 'main':
+../Src/main.c:22:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   22 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "07_usart_tx_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\07_usart_tx_modular\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="07_usart_tx_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 07_usart_tx_modular.elf
+ 
+arm-none-eabi-size   07_usart_tx_modular.elf 
+arm-none-eabi-objdump -h -S  07_usart_tx_modular.elf  > "07_usart_tx_modular.list"
+   text	   data	    bss	    dec	    hex	filename
+   5768	    108	   1588	   7464	   1d28	07_usart_tx_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 07_usart_tx_modular.list
+ 
+00:51:11 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-size   07_usart_tx_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	    108	   1588	   7464	   1d28	07_usart_tx_modular.elf
+Finished building: default.size.stdout
+ 
+00:54:41 **** Incremental Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "00_led_toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\00_led_toggle\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="00_led_toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 00_led_toggle.elf
+ 
+arm-none-eabi-size   00_led_toggle.elf 
+arm-none-eabi-objdump -h -S  00_led_toggle.elf  > "00_led_toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: 00_led_toggle.list
+ 
+00:54:42 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-size   01_read_user_button.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+00:54:42 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+00:54:42 **** Incremental Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+00:54:42 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+00:54:43 **** Incremental Build of configuration Debug for project 05_usart_tx ****
+make -j8 all 
+arm-none-eabi-size   05_usart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5764	    108	   1588	   7460	   1d24	05_usart_tx.elf
+Finished building: default.size.stdout
+ 
+00:54:43 **** Incremental Build of configuration Debug for project 06_usart_tx_with_printf ****
+make -j8 all 
+arm-none-eabi-size   06_usart_tx_with_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1368	      8	   1568	   2944	    b80	06_usart_tx_with_printf.elf
+Finished building: default.size.stdout
+ 
+00:54:43 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-size   07_usart_tx_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	    108	   1588	   7464	   1d28	07_usart_tx_modular.elf
+Finished building: default.size.stdout
+ 
+00:54:43 **** Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/uart.c: In function 'usart2_tx_rx_init':
+../Src/uart.c:37:19: error: called object is not a function or function pointer
+   37 |   GPIOA->MODER |= (0x2 << 6) // A3
+      |                   ^
+../Src/main.c: In function 'main':
+../Src/main.c:14:2: warning: implicit declaration of function 'usart2_tx_init'; did you mean 'usart2_tx_rx_init'? [-Wimplicit-function-declaration]
+   14 |  usart2_tx_init();
+      |  ^~~~~~~~~~~~~~
+      |  usart2_tx_rx_init
+../Src/main.c:22:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   22 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+make: *** [Src/subdir.mk:28: Src/uart.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:54:53 **** Incremental Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-size   00_led_toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+00:54:53 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-size   01_read_user_button.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+00:54:54 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+00:54:54 **** Incremental Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+00:54:54 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+00:54:54 **** Incremental Build of configuration Debug for project 05_usart_tx ****
+make -j8 all 
+arm-none-eabi-size   05_usart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5764	    108	   1588	   7460	   1d24	05_usart_tx.elf
+Finished building: default.size.stdout
+ 
+00:54:54 **** Incremental Build of configuration Debug for project 06_usart_tx_with_printf ****
+make -j8 all 
+arm-none-eabi-size   06_usart_tx_with_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1368	      8	   1568	   2944	    b80	06_usart_tx_with_printf.elf
+Finished building: default.size.stdout
+ 
+00:54:55 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-size   07_usart_tx_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	    108	   1588	   7464	   1d28	07_usart_tx_modular.elf
+Finished building: default.size.stdout
+ 
+00:54:55 **** Incremental Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "08_usart_rx_tx_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\08_usart_rx_tx_modular\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08_usart_rx_tx_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Src/main.o: in function `main':
+C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/08_usart_rx_tx_modular/Debug/../Src/main.c:14: undefined reference to `usart2_tx_init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:63: 08_usart_rx_tx_modular.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:55:15 **** Incremental Build of configuration Debug for project 00_led_toggle ****
+make -j8 all 
+arm-none-eabi-size   00_led_toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    880	      8	   1568	   2456	    998	00_led_toggle.elf
+Finished building: default.size.stdout
+ 
+00:55:15 **** Incremental Build of configuration Debug for project 01_read_user_button ****
+make -j8 all 
+arm-none-eabi-size   01_read_user_button.elf 
+   text	   data	    bss	    dec	    hex	filename
+    924	      8	   1568	   2500	    9c4	01_read_user_button.elf
+Finished building: default.size.stdout
+ 
+00:55:15 **** Incremental Build of configuration Debug for project 02_gpio_output_with_f4headers ****
+make -j8 all 
+arm-none-eabi-size   02_gpio_output_with_f4headers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    876	      8	   1568	   2452	    994	02_gpio_output_with_f4headers.elf
+Finished building: default.size.stdout
+ 
+00:55:15 **** Incremental Build of configuration Debug for project 03_gpio_bsrr ****
+make -j8 all 
+arm-none-eabi-size   03_gpio_bsrr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    912	      8	   1568	   2488	    9b8	03_gpio_bsrr.elf
+Finished building: default.size.stdout
+ 
+00:55:15 **** Incremental Build of configuration Debug for project 04_gpio_input ****
+make -j8 all 
+arm-none-eabi-size   04_gpio_input.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      8	   1568	   2448	    990	04_gpio_input.elf
+Finished building: default.size.stdout
+ 
+00:55:16 **** Incremental Build of configuration Debug for project 05_usart_tx ****
+make -j8 all 
+arm-none-eabi-size   05_usart_tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5764	    108	   1588	   7460	   1d24	05_usart_tx.elf
+Finished building: default.size.stdout
+ 
+00:55:16 **** Incremental Build of configuration Debug for project 06_usart_tx_with_printf ****
+make -j8 all 
+arm-none-eabi-size   06_usart_tx_with_printf.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1368	      8	   1568	   2944	    b80	06_usart_tx_with_printf.elf
+Finished building: default.size.stdout
+ 
+00:55:16 **** Incremental Build of configuration Debug for project 07_usart_tx_modular ****
+make -j8 all 
+arm-none-eabi-size   07_usart_tx_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5768	    108	   1588	   7464	   1d28	07_usart_tx_modular.elf
+Finished building: default.size.stdout
+ 
+00:55:16 **** Incremental Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:22:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   22 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "08_usart_rx_tx_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\08_usart_rx_tx_modular\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08_usart_rx_tx_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08_usart_rx_tx_modular.elf
+ 
+arm-none-eabi-size   08_usart_rx_tx_modular.elf 
+arm-none-eabi-objdump -h -S  08_usart_rx_tx_modular.elf  > "08_usart_rx_tx_modular.list"
+   text	   data	    bss	    dec	    hex	filename
+   5816	    108	   1588	   7512	   1d58	08_usart_rx_tx_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08_usart_rx_tx_modular.list
+ 
+00:55:29 **** Incremental Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-size   08_usart_rx_tx_modular.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5816	    108	   1588	   7512	   1d58	08_usart_rx_tx_modular.elf
+Finished building: default.size.stdout
+ 
+01:02:54 **** Incremental Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+arm-none-eabi-gcc -o "08_usart_rx_tx_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\08_usart_rx_tx_modular\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08_usart_rx_tx_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08_usart_rx_tx_modular.elf
+ 
+arm-none-eabi-size   08_usart_rx_tx_modular.elf 
+arm-none-eabi-objdump -h -S  08_usart_rx_tx_modular.elf  > "08_usart_rx_tx_modular.list"
+   text	   data	    bss	    dec	    hex	filename
+   5816	    108	   1588	   7512	   1d58	08_usart_rx_tx_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08_usart_rx_tx_modular.list
+ 
+01:15:50 **** Incremental Build of configuration Debug for project 08_usart_rx_tx_modular ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Include" -I"C:/Users/blue/Documents/GitHub/STM32F407-DISCOVERY-Bare-Metal/02_gpio_output_with_f4headers/f4-headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
+../Src/main.c: In function 'main':
+../Src/main.c:32:36: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+   32 |  usart2_test((uint8_t*)msg, strlen(msg));
+      |                                    ^~~
+      |                                    |
+      |                                    uint8_t * {aka unsigned char *}
+In file included from ../Src/main.c:2:
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:41:17: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t  strlen (const char *);
+      |                 ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "08_usart_rx_tx_modular.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\blue\Documents\GitHub\STM32F407-DISCOVERY-Bare-Metal\08_usart_rx_tx_modular\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08_usart_rx_tx_modular.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08_usart_rx_tx_modular.elf
+ 
+arm-none-eabi-size   08_usart_rx_tx_modular.elf 
+arm-none-eabi-objdump -h -S  08_usart_rx_tx_modular.elf  > "08_usart_rx_tx_modular.list"
+   text	   data	    bss	    dec	    hex	filename
+   5972	    108	   1588	   7668	   1df4	08_usart_rx_tx_modular.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08_usart_rx_tx_modular.list
  

@@ -1,0 +1,46 @@
+#include <stdint.h>
+#include <string.h>
+#include <stdio.h>
+
+#include "stm32f407xx.h"
+#include "uart.h"
+
+
+
+
+
+int main() {
+
+
+	// set D12 led as output
+	GPIOD->MODER |= (1U << 24);
+	GPIOD->MODER &= ~(1U << 25);
+
+	usart2_tx_rx_init();
+
+	// initden sonra delay olmalı, direkt iletim yaparsa ilk byte hatalı gidiyor
+	// ayrıca sistem baslangıcınca stm kendi sacma bir sey basıyor - > debuga girdiğinden dolayıymış
+	for(int i = 0; i < 1000000; i++);
+	usart2_write('\n');
+
+	uint8_t msg[30] = "ESENLIKLER DUNYA\n";
+	usart2_test((uint8_t*)msg, strlen(msg));
+
+	for(int i = 0; i < 1000000; i++);
+
+	for(int i = 0; i < 10; i++) {
+		printf("HUSEYIN OZTURK\n\r");
+	}
+
+	char pwd;
+
+	while(1) {
+
+
+
+	}
+}
+
+
+
+

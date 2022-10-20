@@ -55,6 +55,7 @@ int main()
 
 	while(1)
 	{
+		// Bit maskeleme ile PIN0 durumunu belirten bit okunarak kontrol sağlanır.
 		while ((GPIOA_ID_R & PIN0))
 		{
 			if ((GPIOA_ID_R & PIN0) == 0)

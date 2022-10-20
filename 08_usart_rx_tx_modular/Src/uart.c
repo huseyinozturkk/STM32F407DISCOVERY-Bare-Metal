@@ -5,7 +5,8 @@
 #define CR1_TE			(1U << 3)	// UART Transmit en
 #define CR1_RE			(1U << 2)
 #define CR1_UA			(1U << 13)	// UART UART en
-#define SR_TXE			(1U << 6)
+#define SR_TXE			(1U << 6)	// tx empty
+#define SR_RXNE			(1U << 5)	// rx not empty
 
 
 // GPIOA (AHB1)
@@ -34,7 +35,7 @@ void usart2_tx_rx_init(void) {
 		GPIOA->MODER = 0xA8000000;  // reset
 
 		GPIOA->MODER |= (0x2 << 4); // 0b01 AF - alternate func mod A2
-		GPIOA->MODER |=	(0x2 << 6)	// A3
+		GPIOA->MODER |=	(0x2 << 6);	// A3
 		// set gpio speed
 		GPIOA->OSPEEDR = 0x0C000000;  // reset
 		GPIOA->OSPEEDR |= (0x2 << 4); // 0b10 A2
@@ -53,10 +54,18 @@ void usart2_tx_rx_init(void) {
 		// uart transfer direction
 		USART2->CR1 = 0x0; 	// reset
 		USART2->CR1 |= CR1_TE; // transmit en
-		USART2->CR1	|= CR1_RE;
+		USART2->CR1	|= CR1_RE; // receive en
 		// en uart
 		USART2->CR1 |= CR1_UA;	// uart en
 
+}
+
+char usart2_read(void) {
+	// is receive data reg not empty
+	while(!(USART2->SR & SR_RXNE)) {}
+
+	// read data
+	return USART2->DR;
 }
 
 void usart2_write(uint8_t ch) {

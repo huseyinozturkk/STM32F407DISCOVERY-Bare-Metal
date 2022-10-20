@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_ranges 00000030  00000000  00000000  000104e0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00000b0d  00000000  00000000  00010510  2**0
+ 17 .debug_macro  00000add  00000000  00000000  00010510  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000000ec  00000000  00000000  0001101d  2**0
+ 18 .debug_line   000000ec  00000000  00000000  00010fed  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00002f9e  00000000  00000000  00011109  2**0
+ 19 .debug_str    00002ed2  00000000  00000000  000110d9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  000140a7  2**0
+ 20 .comment      00000050  00000000  00000000  00013fab  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000058  00000000  00000000  000140fc  2**2
+ 21 .debug_frame  00000058  00000000  00000000  00013ffc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -89,6 +89,7 @@ int main()
  80001ea:	b083      	sub	sp, #12
  80001ec:	af00      	add	r7, sp, #0
 	// D portu için clock aktif edilir.
+	// Enable clock for port D
 	RCC_AHB1EN_R |= RCC_GPIOD_EN;
  80001ee:	4b2f      	ldr	r3, [pc, #188]	; (80002ac <main+0xc4>)
  80001f0:	681b      	ldr	r3, [r3, #0]
@@ -97,6 +98,7 @@ int main()
  80001f8:	6013      	str	r3, [r2, #0]
 
 	// D portu temizlenir
+	// clear D port
 	GPIOD_MODE_R &= 0x0;
  80001fa:	4b2d      	ldr	r3, [pc, #180]	; (80002b0 <main+0xc8>)
  80001fc:	681b      	ldr	r3, [r3, #0]
@@ -105,6 +107,7 @@ int main()
  8000202:	601a      	str	r2, [r3, #0]
 
 	// D12 çıkış olarak ayarlanır
+	// set D12 as output
 	GPIOD_MODE_R |= (1U << 24);
  8000204:	4b2a      	ldr	r3, [pc, #168]	; (80002b0 <main+0xc8>)
  8000206:	681b      	ldr	r3, [r3, #0]
@@ -117,7 +120,7 @@ int main()
  8000214:	4a26      	ldr	r2, [pc, #152]	; (80002b0 <main+0xc8>)
  8000216:	f023 7300 	bic.w	r3, r3, #33554432	; 0x2000000
  800021a:	6013      	str	r3, [r2, #0]
-	// 13
+	// set D13 as output
 	GPIOD_MODE_R |= (1U << 26);
  800021c:	4b24      	ldr	r3, [pc, #144]	; (80002b0 <main+0xc8>)
  800021e:	681b      	ldr	r3, [r3, #0]
@@ -130,7 +133,7 @@ int main()
  800022c:	4a20      	ldr	r2, [pc, #128]	; (80002b0 <main+0xc8>)
  800022e:	f023 6300 	bic.w	r3, r3, #134217728	; 0x8000000
  8000232:	6013      	str	r3, [r2, #0]
-	// 14
+	// set D14 as output
 	GPIOD_MODE_R |= (1U << 28);
  8000234:	4b1e      	ldr	r3, [pc, #120]	; (80002b0 <main+0xc8>)
  8000236:	681b      	ldr	r3, [r3, #0]
@@ -143,7 +146,7 @@ int main()
  8000244:	4a1a      	ldr	r2, [pc, #104]	; (80002b0 <main+0xc8>)
  8000246:	f023 5300 	bic.w	r3, r3, #536870912	; 0x20000000
  800024a:	6013      	str	r3, [r2, #0]
-	// 15
+	// set D15 as output
 	GPIOD_MODE_R |= (1U << 30);
  800024c:	4b18      	ldr	r3, [pc, #96]	; (80002b0 <main+0xc8>)
  800024e:	681b      	ldr	r3, [r3, #0]
@@ -159,6 +162,7 @@ int main()
 
 	while(1)
 	{
+		// This is where disco begins..
 		GPIOD_OD_R ^= PIN12;
  8000264:	4b13      	ldr	r3, [pc, #76]	; (80002b4 <main+0xcc>)
  8000266:	681b      	ldr	r3, [r3, #0]
@@ -213,7 +217,7 @@ Reset_Handler:
  80002bc:	480d      	ldr	r0, [pc, #52]	; (80002f4 <LoopForever+0x2>)
   mov   sp, r0          /* set stack pointer */
  80002be:	4685      	mov	sp, r0
-/* Call the clock system intitialization function.*/
+/* Call the clock system initialization function.*/
   bl  SystemInit
  80002c0:	f3af 8000 	nop.w
 

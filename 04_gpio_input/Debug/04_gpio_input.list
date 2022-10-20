@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  00010370  2**0
                   CONTENTS, READONLY
- 13 .debug_info   000003d0  00000000  00000000  000103a0  2**0
+ 13 .debug_info   0000033b  00000000  00000000  000103a0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000000ee  00000000  00000000  00010770  2**0
+ 14 .debug_abbrev 000000c1  00000000  00000000  000106db  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000048  00000000  00000000  00010860  2**3
+ 15 .debug_aranges 00000048  00000000  00000000  000107a0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_ranges 00000030  00000000  00000000  000108a8  2**3
+ 16 .debug_ranges 00000030  00000000  00000000  000107e8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00018128  00000000  00000000  000108d8  2**0
+ 17 .debug_macro  000180ec  00000000  00000000  00010818  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00000543  00000000  00000000  00028a00  2**0
+ 18 .debug_line   00000598  00000000  00000000  00028904  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00087a7e  00000000  00000000  00028f43  2**0
+ 19 .debug_str    0008793d  00000000  00000000  00028e9c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000053  00000000  00000000  000b09c1  2**0
+ 20 .comment      00000050  00000000  00000000  000b07d9  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00000054  00000000  00000000  000b0a14  2**2
+ 21 .debug_frame  00000054  00000000  00000000  000b082c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -218,7 +218,7 @@ Reset_Handler:
  80002b4:	480d      	ldr	r0, [pc, #52]	; (80002ec <LoopForever+0x2>)
   mov   sp, r0          /* set stack pointer */
  80002b6:	4685      	mov	sp, r0
-/* Call the clock system intitialization function.*/
+/* Call the clock system initialization function.*/
   bl  SystemInit
  80002b8:	f3af 8000 	nop.w
 

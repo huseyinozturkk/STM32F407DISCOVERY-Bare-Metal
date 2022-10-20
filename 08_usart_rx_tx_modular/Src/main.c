@@ -11,10 +11,20 @@
 
 int main() {
 
-	usart2_tx_init();
+	// D portu clock
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
+
+	// D portunu temizle
+	GPIOD->MODER &= 0x0;
+
+	// D12 led çıkış
+	GPIOD->MODER |= (1U << 24);
+	GPIOD->MODER &= ~(1U << 25);
+
+	usart2_tx_rx_init();
 
 	// initden sonra delay olmalı, direkt iletim yaparsa ilk byte hatalı gidiyor
-	// ayrıca sistem baslangıcınca stm kendi sacma bir sey basıyor
+	// ayrıca sistem baslangıcınca stm kendi sacma bir sey basıyor - > debuga girdiğinden dolayıymış
 	for(int i = 0; i < 1000000; i++);
 	usart2_write('\n');
 
@@ -23,8 +33,22 @@ int main() {
 
 	for(int i = 0; i < 1000000; i++);
 
-	while(1) {
+	for(int i = 0; i < 10; i++) {
 		printf("HUSEYIN OZTURK\n\r");
+	}
+
+	char pwd;
+
+	while(1) {
+
+		pwd = usart2_read();
+
+		if (pwd == '1') {
+			GPIOD->ODR |= (1U << 12); // D12 aktif
+		}
+		else {
+			GPIOD->ODR &= ~(1U << 12); // D12 kapalı
+		}
 
 	}
 }
