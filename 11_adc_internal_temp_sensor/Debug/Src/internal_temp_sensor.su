@@ -1,0 +1,3 @@
+../Src/internal_temp_sensor.c:20:6:internal_temp_sens_init	16	static
+../Src/internal_temp_sensor.c:41:6:start_temp_sensor	4	static
+../Src/internal_temp_sensor.c:50:10:read_adc	4	static
